@@ -20,7 +20,7 @@
 .menu-close{
     position: absolute;
     top: 1.25rem;
-    left: 92%;
+    left: 90%;
     margin-left: 2rem;
     background: none;
 }
@@ -47,7 +47,7 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    width: 250px;
+    
     padding: .5rem 0 .5rem 1rem;
     list-style:  none;
     height: 3.75rem;
@@ -56,7 +56,7 @@
 .nav-text a{
     text-decoration: none;
     color: #f5f5f5;
-    font-size: 1.25rem;
+    font-size: 2rem;
 
     display: flex;
     align-items: center;
@@ -66,6 +66,11 @@
     height:100%;
     padding: 0 1rem;
     border-radius: 0.25rem;
+}
+.nav-text a span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-text a:hover{
     background-color: #1a83ff
@@ -93,8 +98,7 @@
     .nav-menu{ 
         width:  100%;     
     }
-    .nav-text a{
-       
+    .nav-text a{  
         font-size: 2.5rem;
        
     }
@@ -104,5 +108,10 @@
     .menu-close{  
         left: 80%; 
     }
-
+    .nav-menu{
+        transition: left 600ms ;
+    }
+    .nav-menu.active{
+        transition: left 600ms ;
+    }
 }

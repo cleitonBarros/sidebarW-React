@@ -1,7 +1,7 @@
 
 import {ShoppingCart, House, Scroll, Users, Info} from "phosphor-react";
 
-const size = 28
+const size = 32
 
 
 export const SidebarData = [
