@@ -1,5 +1,5 @@
 
-import {ShoppingCart, House, Scroll, Users, Info} from "phosphor-react";
+import {ShoppingCart, House, Scroll} from "phosphor-react";
 
 const size = 32
 

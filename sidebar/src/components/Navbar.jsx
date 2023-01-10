@@ -1,8 +1,7 @@
 import {Link } from "react-router-dom"
 import { List, XSquare } from "phosphor-react";
 import {useState, useEffect} from "react"
-
-
+import bird from "../assets/undraw_bird.svg"
 import { SidebarData } from "./sidebarData";
 import "./Navbar.css"
 
@@ -23,11 +22,15 @@ function Navbar(props){
                         <XSquare  size={32} color="#f5f5f5" weight="bold" onClick={props.sidebar} />
                     </Link>
                 </div>
+                <div className="logo">
+                    Logo<span>Base</span>.
+                </div>
                 <ul className="nav-menu-item">
                     {
                     SidebarData.map((item, index)=>{
                         return(
                             <li onClick={props.closeBar } key={index} className={item.cName}>
+                                
                                 <Link  to={item.path}>
                                     <span>{item.icon}</span><span>{item.title}</span>
                                 </Link>
