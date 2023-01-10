@@ -1,4 +1,4 @@
-import {Link } from "react-router-dom"
+import {Link, NavLink } from "react-router-dom"
 import { List, XSquare } from "phosphor-react";
 import {useState, useEffect} from "react"
 import bird from "../assets/undraw_bird.svg"
@@ -18,7 +18,7 @@ function Navbar(props){
             </Link>
             <nav className={props.state ? 'nav-menu ': 'nav-menu active'}>
                 <div className="nav-bar-toggle">
-                    <Link to="#" className="menu-close">
+                    <Link  to="#" className="menu-close">
                         <XSquare  size={32} color="#f5f5f5" weight="bold" onClick={props.sidebar} />
                     </Link>
                 </div>
@@ -31,9 +31,9 @@ function Navbar(props){
                         return(
                             <li onClick={props.closeBar } key={index} className={item.cName}>
                                 
-                                <Link  to={item.path}>
-                                    <span>{item.icon}</span><span>{item.title}</span>
-                                </Link>
+                                <NavLink className={({ isActive }) => isActive ? "active" : ""}  to={item.path}>
+                                    <span>{item.title}</span>
+                                </NavLink>
                             </li>
 
                         )
