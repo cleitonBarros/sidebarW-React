@@ -1,11 +1,11 @@
-/* .navbar{
+/* /* .navbar{
     background-color: #060b26;
     height: 5rem;
 
     display: flex;
     justify-content: start;
     align-items: center;
-} */
+} 
 .menu-bars{
     position: absolute;
     top: 1.25rem;
@@ -167,4 +167,4 @@ export default Main
     .nav-menu.active{
         transition: left 600ms ;
     }
-}
+} */

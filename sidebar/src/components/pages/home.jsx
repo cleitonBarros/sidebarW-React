@@ -1,11 +1,13 @@
+import Section from "../cstyle/Section"
 
 function Home(props){
    
     
     return(
-        <div >
-            <h1>Home</h1>
-        </div>
+        <Section>
+            Hom
+        </Section>
+        
     )
 }
 export default Home

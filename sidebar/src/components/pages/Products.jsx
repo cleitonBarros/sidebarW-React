@@ -1,11 +1,22 @@
+import Section from "../cstyle/Section"
+import { getAllTechnologies } from "../../lib/dato-cms";
 
+export const getStaticProps = async()=>{
+    const technologies = await  getAllTechnologies();
+    return{
+        props:{
+            technologies: technologies,
+        },
+        revalidate: 120,
+    }
+}
 
-function Products(props){
-    
+function Products({technologies}){
+    console.log(technologies)
     return(
-        <div>
-            <h1>Products</h1>
-        </div>
+        <Section>
+            
+        </Section>
     )
 }
 export default Products
