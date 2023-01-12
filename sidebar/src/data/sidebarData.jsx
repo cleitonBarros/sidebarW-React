@@ -1,9 +1,4 @@
 
-
-
-const size = 32
-
-
 export const SidebarData = [
 
     {

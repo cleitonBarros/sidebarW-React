@@ -17,12 +17,12 @@ html, body, #root{
   align-items: center;
   justify-content: flex-end;
 
-
 }
+/* }
 .home,
 .reports,
 .products {
-  background-color: black;
+  background-color: rgb(179, 173, 173);
   color: #fff;
   width:79%;
   display: flex;
@@ -31,10 +31,4 @@ html, body, #root{
   justify-content: center;
   font-size: 3rem;
   transition: width 900ms ease-in-out;;
-}
-.home.active,
-.reports.active,
-.products.active{
-    width:100%;
-    transition: width 100ms ease-in-out;;
-}
+} */

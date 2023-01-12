@@ -2,9 +2,11 @@ import {Link, NavLink } from "react-router-dom"
 import { List, XSquare } from "phosphor-react";
 import {useState, useEffect} from "react"
 import bird from "../assets/undraw_bird.svg"
-import { SidebarData } from "./sidebarData";
+import { SidebarData } from "../data/sidebarData";
 import "./Navbar.css"
-
+import Menubutton from "../components/Button/MenuButton"
+import Closebutton from "../components/Button/CloseButton"
+import Nav from "../components/cstyle/Nav"
 
 
 function Navbar(props){
@@ -13,9 +15,10 @@ function Navbar(props){
 
     return(
         <>
-            <Link to="#" className={props.state ? 'menu-bars ': 'menu-bars active'}>
+            {/* <a to="#" className={props.state ? 'menu-bars ': 'menu-bars active'}>
                 <List  size={32} color="#f5f5f5" weight="bold" onClick={props.sidebar} />
-            </Link>
+            </a> */}
+            <Menubutton state={props.state} sidebar={props.sidebar}/>
             <nav className={props.state ? 'nav-menu ': 'nav-menu active'}>
                 <div className="nav-bar-toggle">
                     <Link  to="#" className="menu-close">

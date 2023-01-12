@@ -13,7 +13,26 @@
     margin-left: 2rem;
     background: none;
     transition: opacity 0.2s;
+}import styled from "styled-components"
+
+const Main = styled.main `
+  background-color: rgb(179, 173, 173);
+  color: #fff;
+  width:79%;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  transition: width 750ms ease-in-out;
+
+    &.active{
+    width:100%;
+    transition: width 100ms ease-in-out;
 }
+`;
+
+export default Main
 .menu-bars.active{
     opacity: 0;
 }
@@ -55,7 +74,7 @@
 
 .nav-menu.active{
     left: 0;
-    transition: left 1600ms ;
+    transition: left 900ms ;
 }
 .nav-text{
    list-style: none;

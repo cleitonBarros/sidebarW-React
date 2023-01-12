@@ -3,7 +3,7 @@ function Home(props){
    
     
     return(
-        <div className={props.state ? 'home active': 'home'}>
+        <div >
             <h1>Home</h1>
         </div>
     )

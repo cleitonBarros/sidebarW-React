@@ -1,8 +1,9 @@
 
+
 function Products(props){
     
     return(
-        <div className={props.state ? 'products active': 'products'}>
+        <div>
             <h1>Products</h1>
         </div>
     )

@@ -2,7 +2,7 @@
 function Reports(props){
     
     return(
-        <div className={props.state ? 'reports active': 'reports'}>
+        <div >
             <h1>Reports</h1>
         </div>
     )

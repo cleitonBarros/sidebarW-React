@@ -3,9 +3,10 @@ import './App.css'
 import Navbar from "./components/Navbar"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Home from "./pages/home"
-import Reports from "./pages/Reports"
-import Products from "./pages/Products"
+import Home from "./components/pages/home"
+import Reports from "./components/pages/Reports"
+import Products from "./components/pages/Products"
+import Container from "./components/layout/Container"
 
 import {useState, useEffect } from "react"
 
@@ -39,11 +40,13 @@ function App() {
     <>
     <Router>
       <Navbar sidebar={showSidebar} closeBar={closeSidebar} state={sidebar}/>
-      <Routes>
-        <Route exact path="/" element={<Home   state={sidebar} />} />
-        <Route exact path="/products" element={<Products state={sidebar} />} />
-        <Route exact path="/reports" element={<Reports  state={sidebar} />} />
-      </Routes>
+      <Container state={sidebar} >
+        <Routes>
+          <Route exact path="/" element={<Home   state={sidebar} />} />
+          <Route exact path="/products" element={<Products state={sidebar} />} />
+          <Route exact path="/reports" element={<Reports  state={sidebar} />} />
+        </Routes>
+      </Container>
     </Router>
     </>
   )
