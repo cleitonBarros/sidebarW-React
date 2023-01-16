@@ -10,34 +10,34 @@ import Container from "./components/layout/Container"
 
 import {useState, useEffect } from "react"
 
-
 function App() {
-
+  
   const [sidebar, setSidebar] = useState(false)
-
+  
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
+  
   useEffect(() => {
       window.addEventListener("resize", function() {
           setWindowWidth(window.innerWidth)
       })
   }, [])
-
+  
   function showSidebar(){
     setSidebar(prevSidebar => !prevSidebar)
   }
-
-
+  
+  
   function closeSidebar(){
     if(windowWidth < 941){
       setSidebar(prevSidebar => !prevSidebar)
       return
     }
-
+  
   }
  
   return (
     <>
+    
     <Router>
       <Navbar sidebar={showSidebar} closeBar={closeSidebar} state={sidebar}/>
       <Container state={sidebar} >
@@ -48,6 +48,7 @@ function App() {
         </Routes>
       </Container>
     </Router>
+    
     </>
   )
 }

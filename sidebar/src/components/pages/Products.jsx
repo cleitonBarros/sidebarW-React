@@ -1,21 +1,16 @@
 import Section from "../cstyle/Section"
-import { getAllTechnologies } from "../../lib/dato-cms";
+import { useQuery } from "graphql-hooks";
+import Card from "../layout/CardProduct"
 
-export const getStaticProps = async()=>{
-    const technologies = await  getAllTechnologies();
-    return{
-        props:{
-            technologies: technologies,
-        },
-        revalidate: 120,
-    }
-}
 
-function Products({technologies}){
-    console.log(technologies)
+
+
+function Products(){   
     return(
         <Section>
-            
+            <div className="productContainer">
+                <Card />
+            </div>  
         </Section>
     )
 }
